@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/ico" href="logo.ico" sizes="16x16">
+	<link rel="stylesheet" href="style.css">
+	<title>Music-Player</title>
+</head>
+<body>
+
+	<div class="home" id="home">
+		<header>
+			<div class="navbar">
+				<img src="images/logo.png" alt="Logo" class="Logo">
+				<ul>
+					<li><a href="#home"> HOME</a></li>
+					<li><a href="#playlist" target="_self"> PLAYLIST</a></li>
+					<li><a href="#background"> BACK-GROUND</a></li>
+					<li><a href="https://ytmp3.plus/177-youtube-to-mp4/" target="_blank"> DOWNLOAD</a></li>
+				</ul>
+			</div>
+		</header>
+
+		<div class="content">
+			<div class="left-cont">
+				<h1> THE <br> REAL <br> SOUND</h1>
+			</div>
+			<div class="bottom-cont">
+				<p>Click Here To Listen :</p>
+				<div class="title">
+					<h2></h2>
+				</div>
+				<div class="progress">
+					<input type="range" value="0" id="progress" onchange="edit_progress()">
+					<div class="volume-progress">
+						<div class="volume-container">
+							<img src="images/volume-down.png" id="volume-icon" title="Mute" alt="volume image">
+						</div>
+						<div class="volume-paremetor">
+							<input id="volumeRange" type="range" value="50" min="0" max="100"  step="1" oninput="changeVolume(this.value)">
+							<label for="volumeRange" title="" id="volumeLabel">50</label>
+						</div>
+					</div>
+				</div>
+				<div class="music-cont">
+					<button class="btn" id="back" onclick="prev_song()"><img id="btn" title="Previous song" src="images/back.png"></button>
+					<button  id="icon" onclick="playpause()"><img src="images/play.png" id="playPause-btn" alt="Play-Button"></button>
+					<button class="btn" id="next" onclick="next_song()"><img id="btn" title="Next song" src="images/next.png"></button>
+				</div>
+			</div>
+		</div>
+		<audio id="song">
+			<source src="">
+		</audio>
+
+		<!--fdghgfhgfgfggfgfgfgfgfgfhghghghghghghghghghfghfghghgfhfghfghfghgfhgfhfghfghgfhgfhgfhghgfhhhhhhhhhhhhhgfffghhhhhgffffffffffffggggggggghfghgfhgfhgfhfghfghghf-->
+
+		
+	</div>
+
+
+
+	<div class="playlist" id="playlist">
+
+
+		<div class="navbar">
+			<img src="images/logo.png" alt="Logo" class="Logo">
+			<ul>
+				<li><a href="#home"> HOME</a></li>
+				<li><a href="#playlist" target="_self"> PLAYLIST</a></li>
+				<li><a href="#background"> BACK-GROUND</a></li>
+				<li><a href="https://ytmp3.plus/177-youtube-to-mp4/" target="_blank"> DOWNLOAD</a></li>
+			</ul>
+		</div>
+
+		<div class="main2">
+			<div class="playlist-header">
+				<div class="playlist-title">
+					<h1>SELECT A KIND OF MUSIC</h1>
+				</div>
+			</div>
+
+			<div class="playlist-container">
+				<div class="playlist-content">
+					<div class="choices-container">
+						<div class="colonne1">
+							<div id="choice" class="rap" onclick="ChangeRapPlaylist()">
+								<img src="images/rap.png" alt="">
+								<h3>Rap</h3>
+							</div>
+							<div id="choice" class="love" onclick="ChangeLovePlaylist()">
+								<img src="images/love-music.jpg" alt="">
+								<h3>Love</h3>
+							</div>
+							<div id="choice" class="motivate" onclick="ChangeMotivatePlaylist()">
+								<img src="images/motivate-music.jpg" alt="">
+								<h3>Motivate</h3>
+							</div>
+						</div>
+
+						<div class="colonne2">
+							<div id="choice" class="mood" onclick="ChangeMoodPlaylist()">
+								<img src="images/mood-music.jpg" alt="">
+								<h3>Mood</h3>
+							</div>
+							<div id="choice" class="sad" onclick="ChangeSadPlaylist()">
+								<img src="images/sad-music.jpg" alt="">
+								<h3>Sad</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="background" id="background">
+			
+		<div class="navbar">
+			<img src="images/logo.png" alt="Logo" class="Logo">
+			<ul>
+				<li><a href="#home"> HOME</a></li>
+				<li><a href="#playlist" target="_self"> PLAYLIST</a></li>
+				<li><a href="#background"> BACK-GROUND</a></li>
+				<li><a href="https://ytmp3.plus/177-youtube-to-mp4/" target="_blank"> DOWNLOAD</a></li>
+			</ul>
+		</div>
+		
+
+		<div class="container">
+			<div class="header">
+				<div class="title">
+					<h1>
+						CHOOSE A BACKGROUND
+					</h1>
+				</div>
+			</div>
+
+			<div class="main">
+				<div class="column1">
+					<div class="img-1">
+						<img src="images/bg1.jpg" alt="bg-image" onclick="changeBackground('images/bg1.jpg')">
+					</div>
+
+					<div class="img-2">
+						<img src="images/bg2.jpg" alt="bg-image" onclick="changeBackground(this.src)">
+					</div>
+
+					<div class="img-3">
+						<img src="images/bg3.jpg" alt="bg-image" onclick="changeBackground(this.src)">
+					</div>
+
+					<div class="img-4">
+						<img src="images/bg4.jpg" alt="bg-image" onclick="changeBackground(this.src)">
+					</div>
+
+					<div class="img-5">
+						<img src="images/bg13.jpg" alt="bg-image" onclick="changeBackground(this.src)">
+					</div>
+				</div>
+
+				<div class="column2">
+					<div class="img-1">
+						<img src="images/bg5.jpg" alt="bg-image" onclick="changeBackground(this.src)">
+					</div>
+
+					<div class="img-3">
+						<img src="images/bg7.jpg" alt="bg-image" onclick="changeBackground(this.src)">
+					</div>
+
+					<div class="img-4">
+						<img src="images/bg8.jpg" alt="bg-image" onclick="changeBackground(this.src)">
+					</div>
+					<div class="img-5">
+						<img src="images/bg16.jpg" alt="bg-image" onclick="changeBackground(this.src)">
+					</div>
+				</div>
+
+				<div class="column3">
+					<div class="img-1">
+						<img src="images/bg9.jpg" alt="bg-image" onclick="changeBackground(this.src)">
+					</div>
+
+					<div class="img-2">
+						<img src="images/bg10.jpg" alt="bg-image" onclick="changeBackground(this.src)">
+					</div>
+
+					<div class="img-3">
+						<img src="images/bg11.jpg" alt="bg-image" onclick="changeBackground(this.src)">
+					</div>
+
+					<div class="img-4">
+						<img src="images/bg12.jpg" alt="bg-image" onclick="changeBackground(this.src)">
+					</div>
+					<div class="img-5">
+						<img src="images/img.jpg" alt="bg-image" onclick="changeBackground(this.src)">
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<footer>
+			<p>Copyright © 2023 My Music Website</p>
+		</footer>
+
+	</div>
+
+
+<audio src=""></audio>
+
+	<script src="script.js">
+
+	</script>
+</body>
+</html>
